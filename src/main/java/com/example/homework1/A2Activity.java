@@ -10,7 +10,6 @@ import android.widget.Button;
 
 public class A2Activity extends AppCompatActivity {
 
-   private Button btn;
    private FragmentTransaction fragmentTransaction;
    private FragmentManager fragmentManager;
 
@@ -26,8 +25,16 @@ public class A2Activity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.a2f1, fragment1);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        System.out.println("sunt in back");
+        System.exit(0);
     }
 
 }
