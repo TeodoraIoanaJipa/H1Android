@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Homework1</string>
+    <string name="title_activity_first">FirstActivity</string>
+    <string name="go_to">Go to Second Activity</string>
+    <string name="add_fragment">Add fragment</string>
+    <string name="second_activity">Second Activity</string>
+    <string name="button_one">Button One</string>
+</resources>
