@@ -33,7 +33,7 @@ public class A2Activity extends AppCompatActivity {
     @Override
     public void onBackPressed()
     {
-        System.out.println("sunt in back");
+        finishAffinity();
         System.exit(0);
     }
 

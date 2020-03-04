@@ -19,6 +19,8 @@ public class A2F2 extends Fragment {
 
     private FragmentTransaction fragmentTransaction;
     private FragmentManager fragmentManager;
+    private Button button1;
+    private Button button2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,8 +32,8 @@ public class A2F2 extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         // handle your fragment events here
-        Button button1 = (Button)view.findViewById(R.id.btn1);
-        Button button2 = (Button)view.findViewById(R.id.btn2);
+        button1 = (Button)view.findViewById(R.id.btn1);
+        button2 = (Button)view.findViewById(R.id.btn2);
         Button button3 = (Button)view.findViewById(R.id.btn3);
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -48,13 +50,16 @@ public class A2F2 extends Fragment {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().popBackStack();
+//                Fragment fragment1 = fragmentManager.findFragmentById(R.id.fragment1act1);
+//                fragmentTransaction.remove(fragment1);
+//                fragmentTransaction.commit();
             }
         });
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                A2Activity.this.finish();
+                getActivity().finish();
             }
         });
 
